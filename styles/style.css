@@ -1,0 +1,74 @@
+.hind-madurai-regular {
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Hind Madurai", sans-serif;
+}
+
+:root {
+  --primary: #00a63e;
+  --primary-dark: #006747;
+}
+
+header {
+  padding: 24px 60px;
+}
+
+.navbar {
+  /* height: 10vh; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo h2 {
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-items div {
+  background-color: #41ff6a2f;
+  width: 123px;
+  height: 52px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.nav-items div span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.copy-btn {
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 36px;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}

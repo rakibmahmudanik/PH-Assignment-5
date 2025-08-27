@@ -152,6 +152,11 @@ main .card .card-head .card-icon {
 main .card .card-head i {
   font-size: 1.2rem;
   color: gray;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .card .card-head i:hover {
+  color: rgba(128, 128, 128, 0.555);
 }
 .card-titles {
   width: 100%;
@@ -202,6 +207,12 @@ main .card .card-head i {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-btns .call:hover {
+  opacity: 0.8;
 }
 .card-btns .call p {
   padding-top: 4px;
@@ -209,6 +220,12 @@ main .card .card-head i {
 
 .card-btns .copy {
   font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-btns .copy:hover {
+  opacity: 0.5;
 }
 
 .history {

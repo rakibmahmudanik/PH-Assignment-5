@@ -3,6 +3,7 @@ const hearts = document.querySelectorAll(".heart");
 const heartsCount = document.getElementById("hearts-count");
 const coinsCount = document.getElementById("coins-count");
 const history = document.querySelector(".history-data");
+const clear = document.getElementById("clear-history");
 
 let counter = 1;
 for (const heart of hearts) {
@@ -35,6 +36,10 @@ for (const card of cards) {
             `;
 
         history.appendChild(li);
+
+        clear.addEventListener("click", function () {
+          history.removeChild(li);
+        });
       }
     } else {
       alert("insufficient Coin Balance!");

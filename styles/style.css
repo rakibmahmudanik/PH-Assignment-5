@@ -250,8 +250,12 @@ main .card .card-head i:hover {
 .history-btn {
   font-size: 0.6rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
 }
-
+.history-btn:hover {
+  opacity: 0.8;
+}
 .history-data li {
   display: flex;
   align-items: center;

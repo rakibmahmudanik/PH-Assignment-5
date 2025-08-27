@@ -41,6 +41,13 @@ header {
   font-weight: bold;
 }
 
+.balances {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 .nav-items {
   display: flex;
   align-items: center;
@@ -48,7 +55,7 @@ header {
   gap: 20px;
 }
 
-.nav-items div {
+.nav-items .balances div {
   background-color: #41ff6a2f;
   width: 123px;
   height: 52px;
@@ -58,7 +65,7 @@ header {
   justify-content: center;
   gap: 10px;
 }
-.nav-items div span {
+.nav-items .balances div span {
   font-size: 1rem;
   font-weight: bold;
 }
@@ -86,15 +93,16 @@ header {
 .hero h1 {
   font-size: 2.5rem;
   color: white;
+  text-align: center;
 }
 
 .hero p {
   font-size: 1.4rem;
   color: white;
+  text-align: center;
 }
 
 main {
-  height: 100vh;
   background-color: #f5fff6;
   padding: 60px;
 }
@@ -107,7 +115,7 @@ main .emargency-card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 100%;
+  width: 80%;
 }
 main .card {
   background-color: #fff;
@@ -208,7 +216,7 @@ main .card .card-head i {
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
-  width: auto;
+  width: 20%;
 }
 
 .history .history-head {
@@ -236,4 +244,65 @@ main .card .card-head i {
   padding: 16px;
   background-color: rgba(0, 0, 0, 0.035);
   border-radius: 8px;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 600px) {
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo h2 {
+    font-size: 2rem;
+  }
+  .navbar {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  /* .nav-items .balances {
+    gap: 10px;
+  }
+  .nav-items {
+    gap: 10px;
+  }
+  .nav-items .balances div span {
+    font-size: 0.8rem;
+  } */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .main-content {
+    flex-direction: column-reverse;
+  }
+}
+
+/*Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 990px) {
+  /* .logo h2 {
+    font-size: 1.5rem;
+  } */
+  .nav-items .balances div {
+    width: auto;
+    height: auto;
+    padding: 8px 15px;
+  }
+  .copy-btn {
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+  }
+
+  main .emargency-card-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .history {
+    width: auto;
+  }
 }

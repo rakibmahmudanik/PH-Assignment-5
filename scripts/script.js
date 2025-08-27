@@ -4,11 +4,13 @@ const heartsCount = document.getElementById("hearts-count");
 const coinsCount = document.getElementById("coins-count");
 const history = document.querySelector(".history-data");
 const clear = document.getElementById("clear-history");
+const copyBtn = document.getElementById("copy");
 
-let counter = 1;
+let heartCounter = 1;
+let copyCounter = 3;
 for (const heart of hearts) {
   heart.addEventListener("click", function () {
-    heartsCount.innerText = counter++;
+    heartsCount.innerText = heartCounter++;
   });
 }
 
@@ -43,6 +45,14 @@ for (const card of cards) {
       }
     } else {
       alert("insufficient Coin Balance!");
+    }
+  });
+
+  card.querySelector(".copy").addEventListener("click", function (e) {
+    if (e.target.classList.contains("copy")) {
+      navigator.clipboard.writeText(callNumber);
+      copyBtn.innerText = `${copyCounter++} Copy`;
+      alert(`Number coppied ${callNumber}`);
     }
   });
 }
